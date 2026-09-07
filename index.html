@@ -127,9 +127,9 @@
   }
   .hero-bottom{
     margin-top:56px;
-    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;
+    display:flex; flex-direction:column; align-items:center;
   }
-  .scroll-hint{font-size:12px; letter-spacing:0.12em; color:var(--text-2);}
+  .scroll-hint{font-size:12px; letter-spacing:0.12em; color:var(--text-2); margin-top:16px; text-align:center;}
   .btn-row{display:flex; gap:14px;}
   .btn{
     padding:15px 26px;
@@ -255,11 +255,6 @@
   .contact-grid h2{font-size:clamp(34px,5vw,54px); text-transform:uppercase; margin-bottom:22px;}
   .contact-grid h2 .accent{color:var(--cyan);}
   .contact-grid p{color:var(--text-1); max-width:420px; margin-bottom:34px;}
-  .social-row{display:flex; gap:12px; flex-wrap:wrap;}
-  .social-pill{
-    border:1px solid var(--line); padding:14px 20px; border-radius:999px;
-    font-size:12.5px; font-weight:700; letter-spacing:0.04em; color:var(--text-1);
-  }
   .contact-list .item{
     padding:22px 0; border-bottom:1px solid var(--line);
     display:flex; align-items:center; justify-content:space-between;
@@ -315,11 +310,11 @@
     </h1>
     <p class="lede">A video editing studio turning raw footage into stories that move people — sharp cuts, motion and sound blended into work that stands out.</p>
     <div class="hero-bottom">
-      <div class="scroll-hint">SCROLL</div>
       <div class="btn-row">
         <a href="#work" class="btn btn-solid">WATCH VIDEOS</a>
         <a href="#contact" class="btn btn-outline">GET IN TOUCH</a>
       </div>
+      <div class="scroll-hint">SCROLL</div>
     </div>
   </section>
 
@@ -409,19 +404,14 @@
         <div class="eyebrow"><span class="rule"></span> CONTACT</div>
         <h2>LET'S CREATE <span class="accent">TOGETHER</span></h2>
         <p>Have a project in mind? Reach out through any channel below.</p>
-        <div class="social-row">
-          <div class="social-pill">INSTAGRAM · @EDITINGBOX</div>
-          <div class="social-pill">TIKTOK · @EDITINGBOX</div>
-          <div class="social-pill">SNAPCHAT · EDITINGBOX</div>
-        </div>
       </div>
       <div class="contact-list">
         <div class="item">
-          <div><label>CALL</label><div class="val">+91 91759 59250</div></div>
+          <div><label>STUDIO</label><div class="val">+91 91759 59250</div></div>
           <div class="arrow">→</div>
         </div>
         <div class="item">
-          <div><label>CALL</label><div class="val">+91 92842 38935</div></div>
+          <div><label>STUDIO</label><div class="val">+91 92842 38935</div></div>
           <div class="arrow">→</div>
         </div>
         <div class="item">
