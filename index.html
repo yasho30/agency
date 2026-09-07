@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAME . AGE — Video Editor Portfolio</title>
+<title>EditingBox — Video Editing Studio</title>
+<link rel="icon" href="IMG_0695.png">
 <style>
   :root{
     --bg-0:#0a0d14;
@@ -41,17 +42,23 @@
   header{
     position:sticky; top:0; z-index:50;
     display:flex; align-items:center; justify-content:space-between;
-    padding:22px 6vw;
+    padding:16px 6vw;
     background:rgba(7,10,20,0.72);
     backdrop-filter: blur(10px);
     border-bottom:1px solid var(--line);
   }
   .brand{
-    font-family:'Archivo Black', sans-serif;
-    font-size:20px;
-    display:flex; align-items:baseline; gap:6px;
+    display:flex; align-items:center; gap:10px;
   }
-  .brand .num{color:var(--blue);}
+  .brand img{
+    height:34px; width:auto; display:block;
+  }
+  .brand span{
+    font-family:'Archivo Black', sans-serif;
+    font-size:18px;
+    letter-spacing:-0.01em;
+  }
+  .brand span .num{color:var(--blue);}
   nav{display:flex; gap:38px; font-size:13px; font-weight:600; letter-spacing:0.06em;}
   nav a{color:var(--text-1); transition:color .25s ease;}
   nav a:hover{color:var(--text-0);}
@@ -62,7 +69,9 @@
     display:flex; align-items:center; justify-content:center;
     font-size:12px; font-weight:700; color:var(--text-1);
     transition: border-color .25s ease, color .25s ease;
+    overflow:hidden;
   }
+  .avatar-chip img{width:100%; height:100%; object-fit:cover;}
   .avatar-chip:hover{border-color:var(--line-bright); color:var(--text-0);}
   .navlinks-mobile{display:none;}
 
@@ -181,13 +190,8 @@
     transition: border-color .3s ease;
   }
   .photo-frame:hover{border-color: var(--line-bright);}
-  .photo-frame .placeholder-mark{
-    text-align:center; color:var(--text-2);
-  }
-  .photo-frame .placeholder-mark .initials{
-    font-family:'Archivo Black', sans-serif;
-    font-size:64px; color:var(--text-1);
-    display:block; margin-bottom:10px;
+  .photo-frame img{
+    width:60%; height:auto; object-fit:contain;
   }
   .tag-chip{
     position:absolute; left:18px; bottom:18px;
@@ -199,7 +203,7 @@
   .stat-row{display:flex; gap:56px; margin-top:36px;}
   .stat b{
     font-family:'Archivo Black', sans-serif;
-    font-size:44px; color:var(--cyan); display:block;
+    font-size:40px; color:var(--cyan); display:block;
   }
   .stat span{font-size:12.5px; letter-spacing:0.08em; color:var(--text-2);}
 
@@ -223,33 +227,18 @@
     aspect-ratio:4/5;
     position:relative;
     background:linear-gradient(160deg,#182036,#0a0d18);
-    display:flex; align-items:flex-end; padding:20px;
     overflow:hidden;
   }
-  .work-thumb h4{transition: transform .3s ease;}
-  .work-card:hover .work-thumb h4{transform: translateY(-2px);}
+  .work-thumb video{
+    width:100%; height:100%; object-fit:cover; display:block; background:#000;
+  }
   .work-thumb .video-pill{
-    position:absolute; top:14px; left:14px;
+    position:absolute; top:14px; left:14px; z-index:2;
     font-size:11px; font-weight:700; letter-spacing:0.05em;
     background:rgba(7,10,20,0.75); border:1px solid var(--line);
     padding:5px 10px; border-radius:999px;
+    pointer-events:none;
   }
-  .work-thumb .play{
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    width:52px; height:52px; border-radius:50%;
-    background: linear-gradient(135deg, var(--cyan), var(--blue));
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 0 30px rgba(0,170,255,0.55);
-    transition: box-shadow .3s ease, transform .3s ease;
-  }
-  .work-card:hover .work-thumb .play{
-    box-shadow:0 0 46px rgba(0,170,255,0.85);
-    transform:translate(-50%,-50%) scale(1.08);
-  }
-  .work-thumb .play::after{
-    content:''; border-left:14px solid #03070f; border-top:9px solid transparent; border-bottom:9px solid transparent; margin-left:3px;
-  }
-  .work-thumb h4{font-size:26px; text-transform:uppercase; font-family:'Archivo Black', sans-serif; line-height:1;}
   .work-foot{padding:14px 18px; font-size:12px; letter-spacing:0.08em; color:var(--text-2); font-weight:700;}
 
   /* CONTACT */
@@ -295,24 +284,27 @@
 <body>
 
   <header>
-    <div class="brand">NAME<span class="num">.AGE</span></div>
+    <div class="brand">
+      <img src="IMG_0694.png" alt="EditingBox logo">
+      <span>EDITING<span class="num">BOX</span></span>
+    </div>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="avatar-chip">XX</div>
+    <div class="avatar-chip"><img src="IMG_0695.png" alt="EB"></div>
   </header>
 
   <section class="hero" id="home" style="border-top:none;">
-    <div class="badge"><span class="dot"></span> CREATIVE EDITOR · EST. 20XX</div>
+    <div class="badge"><span class="dot"></span> VIDEO EDITING STUDIO</div>
     <h1 class="display">
-      YOUR<br>
-      <span class="outline">NAME</span><br>
-      <span class="accent">EDITS.</span>
+      WE ARE<br>
+      <span class="outline">EDITING</span><br>
+      <span class="accent">BOX.</span>
     </h1>
-    <p class="lede">Video editor &amp; visual storyteller crafting bold, high-impact content. Replace this line with your own tagline — age, focus, and what you make.</p>
+    <p class="lede">A video editing studio turning raw footage into stories that move people — sharp cuts, motion and sound blended into work that stands out.</p>
     <div class="hero-bottom">
       <div class="scroll-hint">SCROLL</div>
       <div class="btn-row">
@@ -324,21 +316,18 @@
 
   <section id="about">
     <div class="eyebrow"><span class="rule"></span> ABOUT</div>
-    <h2 class="section-title">MEET <span class="hl">YOU</span></h2>
+    <h2 class="section-title">MEET <span class="hl">EDITINGBOX</span></h2>
     <div class="about-grid">
       <div class="photo-frame">
-        <div class="placeholder-mark">
-          <span class="initials">XX</span>
-          drop your photo here
-        </div>
-        <div class="tag-chip">YOUR AGE</div>
+        <img src="IMG_0694.png" alt="EditingBox logo">
+        <div class="tag-chip">EDITINGBOX</div>
       </div>
       <div class="about-copy">
-        <p>I'm <strong>Your Name</strong> — a video editor and content creator. I turn raw footage into stories that move people, blending sharp cuts, motion and sound into work that stands out.</p>
+        <p>We're <strong>EditingBox</strong>, a video editing studio turning raw footage into stories that move people. We blend sharp cuts, motion and sound into work that stands out.</p>
         <p>Every video on this page is a piece of that craft: montages and edits built with the same obsession for detail — from the first frame to the last export.</p>
         <div class="stat-row">
-          <div class="stat"><b>XX</b><span>YEARS OLD</span></div>
-          <div class="stat"><b>X</b><span>VIDEO PROJECTS</span></div>
+          <div class="stat"><b>2.5+</b><span>YEARS OF EXPERIENCE</span></div>
+          <div class="stat"><b>50+</b><span>CLIENT PROJECTS</span></div>
         </div>
       </div>
     </div>
@@ -351,50 +340,38 @@
       <div class="work-card">
         <div class="work-thumb">
           <span class="video-pill">VIDEO</span>
-          <div class="play"></div>
-          <h4>Project<br>One</h4>
+          <video controls preload="metadata">
+            <source src="IMG_0688.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="work-foot">VIDEO</div>
+        <div class="work-foot">PROJECT ONE</div>
       </div>
       <div class="work-card">
         <div class="work-thumb">
           <span class="video-pill">VIDEO</span>
-          <div class="play"></div>
-          <h4>Project<br>Two</h4>
+          <video controls preload="metadata">
+            <source src="IMG_0689.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="work-foot">VIDEO</div>
+        <div class="work-foot">PROJECT TWO</div>
       </div>
       <div class="work-card">
         <div class="work-thumb">
           <span class="video-pill">VIDEO</span>
-          <div class="play"></div>
-          <h4>Project<br>Three</h4>
+          <video controls preload="metadata">
+            <source src="IMG_0690.mov" type="video/quicktime">
+          </video>
         </div>
-        <div class="work-foot">VIDEO</div>
+        <div class="work-foot">PROJECT THREE</div>
       </div>
       <div class="work-card">
         <div class="work-thumb">
           <span class="video-pill">VIDEO</span>
-          <div class="play"></div>
-          <h4>Project<br>Four</h4>
+          <video controls preload="metadata">
+            <source src="IMG_0691.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="work-foot">VIDEO</div>
-      </div>
-      <div class="work-card">
-        <div class="work-thumb">
-          <span class="video-pill">VIDEO</span>
-          <div class="play"></div>
-          <h4>Project<br>Five</h4>
-        </div>
-        <div class="work-foot">VIDEO</div>
-      </div>
-      <div class="work-card">
-        <div class="work-thumb">
-          <span class="video-pill">VIDEO</span>
-          <div class="play"></div>
-          <h4>Project<br>Six</h4>
-        </div>
-        <div class="work-foot">VIDEO</div>
+        <div class="work-foot">PROJECT FOUR</div>
       </div>
     </div>
   </section>
@@ -406,9 +383,9 @@
         <h2>LET'S CREATE <span class="accent">TOGETHER</span></h2>
         <p>Have a project in mind? Reach out through any channel below.</p>
         <div class="social-row">
-          <div class="social-pill">INSTAGRAM · @YOURHANDLE</div>
-          <div class="social-pill">TIKTOK · @YOURHANDLE</div>
-          <div class="social-pill">SNAPCHAT · YOURHANDLE</div>
+          <div class="social-pill">INSTAGRAM · @EDITINGBOX</div>
+          <div class="social-pill">TIKTOK · @EDITINGBOX</div>
+          <div class="social-pill">SNAPCHAT · EDITINGBOX</div>
         </div>
       </div>
       <div class="contact-list">
@@ -421,14 +398,14 @@
           <div class="arrow">→</div>
         </div>
         <div class="item">
-          <div><label>EMAIL</label><div class="val">you@email.com</div></div>
+          <div><label>EMAIL</label><div class="val">hello@editingbox.com</div></div>
           <div class="arrow">→</div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>© 2026 Your Name. All rights reserved.</footer>
+  <footer>© 2026 EditingBox. All rights reserved.</footer>
 
 </body>
 </html>
