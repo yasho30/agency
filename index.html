@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EditingBox  Video Editing Studio</title>
+<title>EditingBox — Video Editing Studio</title>
 <link rel="icon" href="IMG_0681.png">
 <style>
   :root{
@@ -140,6 +140,8 @@
     box-shadow: 0 0 15px rgba(0,170,255,0.45), 0 0 2px rgba(0,170,255,0.6);
   }
   .btn-solid:hover{
+    background: linear-gradient(135deg, var(--blue), var(--highlight));
+    color:#ffffff;
     box-shadow: 0 0 28px rgba(0,170,255,0.75), 0 0 6px rgba(59,130,246,0.8);
     transform: translateY(-1px);
   }
@@ -149,8 +151,9 @@
     border-color: var(--line);
   }
   .btn-outline:hover{
-    border-color: var(--line-bright);
-    background: rgba(255,255,255,0.06);
+    border-color: var(--cyan);
+    background: var(--cyan);
+    color:#03070f;
   }
 
   section{padding:6vw; border-top:1px solid var(--line);}
@@ -191,7 +194,7 @@
   }
   .photo-frame:hover{border-color: var(--line-bright);}
   .photo-frame img{
-    width:60%; height:auto; object-fit:contain;
+    width:88%; height:auto; object-fit:contain;
   }
   .tag-chip{
     position:absolute; left:18px; bottom:18px;
